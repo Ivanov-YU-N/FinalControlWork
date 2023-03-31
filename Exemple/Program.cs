@@ -11,10 +11,17 @@ void FillArray(string[] array)
         Console.WriteLine($"Введите {i} значение массива ");
         array[i] = Console.ReadLine();
     }
-
+}
+void PrintArray(string[] array)
+{
+    int row = array.Length;
+    for (int i = 0; i < row; i++)
+        Console.Write($"{array[i]} ");
+    Console.WriteLine();
 }
 
 
 int row = GetNumber("Введите размер массива  ");
 string[] array = new string[row];
 FillArray(array);
+PrintArray(array);
